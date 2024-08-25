@@ -172,7 +172,8 @@ def write_to_Json():
     # Запись данных
     data = rows
     with open("data.json", "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent = 1)
+    conn.close()    
 
 
 '''Функция удаляет запись из БД по номеру телефона.'''
